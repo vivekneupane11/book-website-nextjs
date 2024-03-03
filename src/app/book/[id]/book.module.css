@@ -1,0 +1,36 @@
+
+.appBar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items:center;
+    min-height:5vh;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.saveButton{
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin-right: 20px;
+    cursor:pointer; 
+}
+
+.saveButton:hover{
+    background:#000;
+    color:#fff;
+}
+
+
+
+.titleStyles{
+    text-align:center;
+    text-transform:uppercase;
+    padding-left:100px;
+}
+

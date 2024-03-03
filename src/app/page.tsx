@@ -1,95 +1,48 @@
-import Image from 'next/image'
+"use client"
+import BookCard from '@/components/BookCard'
+import Header from '@/components/Header'
+import SideBar from '@/components/SideBar'
+import { books } from '@/constants/mockData'
+import { motion } from 'framer-motion'
 import styles from './page.module.css'
-
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+  <div>
+
+    <Header/>
+
+      <div className={styles.containerStyle}>
+    <section className={styles.content}>
+<SideBar/>
+    </section>
+
+<div className={styles.grouper}>
+  <h1 className={styles.title}>ALL BOOKS</h1>
+  <ul className={styles.ulGroupStyle}>
+    {
+      books.map((book,i)=>
+        <motion.li 
+        whileHover={{scale:1.1}}
+        whileTap={{scale:0.9}}
+        transition={{type:'spring',damping:50,mass:0.75}}
+        initial={{opacity:0,x:200*(i+1)}}
+        animate={{opacity:1,x:0}}
+        key={i}>
+          <a href={`/book/${book.id}`} style={{textDecoration:'none'}} >
+           <BookCard title={book.title} coverImage={book.image} description={book.description} />
           </a>
-        </div>
+        </motion.li>
+      )
+    }
+  </ul>
+</div>
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+  </div>
     </main>
   )
 }
+
+
