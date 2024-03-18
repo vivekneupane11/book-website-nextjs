@@ -15,20 +15,20 @@ export default function BookCard({title,description,coverImage,onClick}:any) {
 
 
 const cardStyle = {
-    width: '200px',
+    width: '100%',
+    height: '100%',
     padding: '1rem',
     borderRadius: '5px',
     backgroundColor: '#f8eadd',
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
     cursor: 'pointer',
     transition: 'transform 0.3s ease',
-    marginBottom: '1.5rem',
-    marginRight: '1.6rem',
   };
   
   const imageStyle = {
     width: '100%',
-    aspectRatio:1,
+    height: 'auto',
+    aspectRatio:1 / 1.2,
     borderRadius: '5px',
     objectFit: 'cover',
     objectPosition: 'top center',
