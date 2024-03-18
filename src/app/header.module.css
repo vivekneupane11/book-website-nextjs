@@ -1,0 +1,56 @@
+/* styles.module.css */
+
+.headerStyle {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .leftContainerStyle {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .bookTitleStyle {
+    color: #000;
+    text-wrap: nowrap;
+  }
+  
+  .searchInputStyle {
+    padding: 0.7rem 1rem;
+    border-radius: 70px;
+    background-color: rgb(248, 234, 221);
+    border: 2px solid #000;
+    min-width: 320px;
+    width: 100%;
+  }
+  
+  .rightContainerStyle {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .avatarStyle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .leftContainerStyle {
+      gap: 10px;
+    }
+
+    .searchInputStyle {
+      min-width: auto;
+      width: 80%;
+    }
+  }
