@@ -2,15 +2,17 @@
 import BookCard from '@/components/BookCard'
 import Header from '@/components/Header'
 import SideBar from '@/components/SideBar'
-import { books } from '@/constants/mockData'
 import { motion } from 'framer-motion'
+import { useFilters } from './hooks/setFilters'
 import styles from './page.module.css'
 export default function Home() {
+  const { handleFilter, filteredBooks } = useFilters()
+
   return (
     <main className={styles.main}>
   <div>
 
-    <Header/>
+    <Header  onChange={handleFilter}/>
 
       <div className={styles.containerStyle}>
     <section className={styles.content}>
@@ -21,7 +23,7 @@ export default function Home() {
   <h1 className={styles.title}>ALL BOOKS</h1>
   <ul className={styles.ulGroupStyle}>
     {
-      books.map((book,i)=>
+      filteredBooks.map((book,i)=>
         <motion.li 
         whileHover={{scale:1.1}}
         whileTap={{scale:0.9}}

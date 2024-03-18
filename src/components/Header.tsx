@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-export default function Header() {
+export default function Header({onChange}: {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void}) {
   return (
    <header style={headerStyle}>
     <motion.div style={leftContainerStyle}
@@ -10,7 +10,8 @@ export default function Header() {
     initial={{opacity:0,x:-1000}} animate={{opacity:1,x:0}}
 >
     <h1 style={bookTitleStyle}>Book App</h1>
-        <motion.input type="text" placeholder='Tell me what you like to read and we will get that ....'
+        <motion.input  type="text" placeholder='Tell me what you like to read and we will get that ....'
+        onChange={onChange}
         style={searchInputStyle}
         initial={{opacity:0,x:-100}}
         animate={{opacity:1,x:0}}
