@@ -1,8 +1,10 @@
+import Image from "next/image";
+import { CSSProperties } from "react";
 
 export default function BookCard({title,description,coverImage,onClick}:any) {
   return (
    <div style={cardStyle} onClick={onClick}>
-<img src={coverImage} alt={title} style={imageStyle}/>
+<Image src={coverImage} width={200} height={200} alt={title} style={imageStyle as CSSProperties}/>
 <div style={contentStyle}>
 <h3 style={titleStyle}>{title}</h3>
 <p style={descriptionStyle}>{description}</p>
@@ -28,6 +30,8 @@ const cardStyle = {
     width: '100%',
     aspectRatio:1,
     borderRadius: '5px',
+    objectFit: 'cover',
+    objectPosition: 'top center',
   };
   
   const contentStyle = {

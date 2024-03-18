@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { CSSProperties } from 'react'
 
 export default function Header() {
   return (
@@ -24,7 +25,7 @@ export default function Header() {
     initial={{opacity:0,x:1000}} animate={{opacity:1,x:0}}
     >
 <Link href="/profile" style={avatarLinkStyle}>
-    <motion.img src="https://imageio.forbes.com/specials-images/imageserve/6244c655b6ecfb569a31a3ba/John-Cena-performing-his-famous--You-Can-t-See-Me--taunt-/0x0.jpg?format=jpg&crop=1200,675,x0,y0,safe&width=960" alt="avatar" style={avatarStyle} initial={{opacity:0,x:100}} animate={{opacity:1,x:0}}  />
+    <motion.img src="https://imageio.forbes.com/specials-images/imageserve/6244c655b6ecfb569a31a3ba/John-Cena-performing-his-famous--You-Can-t-See-Me--taunt-/0x0.jpg?format=jpg&crop=1200,675,x0,y0,safe&width=960" alt="avatar" style={avatarStyle as CSSProperties} initial={{opacity:0,x:100}} animate={{opacity:1,x:0}}  />
 
    
 </Link>
@@ -74,6 +75,9 @@ const avatarLinkStyle = {
 const avatarStyle ={
     width:"40px",
     height:'40px',
-    borderRadius:'50%'
+    borderRadius:'50%',
+    objectFit:'cover',
+    objectPosition:'center',
+    aspectRatio: 1/1
 }
 
