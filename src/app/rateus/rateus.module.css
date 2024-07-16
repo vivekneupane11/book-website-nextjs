@@ -1,0 +1,39 @@
+/* src/app/rateus/rateus.module.css */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8eadd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.star.filled {
+  color: #ff0;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
