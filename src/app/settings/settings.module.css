@@ -1,0 +1,41 @@
+/* src/app/settings/settings.module.css */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8eadd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.setting {
+  margin-bottom: 15px;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.input {
+  margin-right: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
