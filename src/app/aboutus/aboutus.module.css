@@ -1,0 +1,22 @@
+/* src/app/aboutus/aboutus.module.css */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8eadd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
