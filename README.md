@@ -8,6 +8,8 @@ A web application that enhances the reading experience by allowing users to inte
 
 You can check out the live demo of the Book Reading App [here](https://book-website-nextjs-nh5jvrwtr-vivekneupane11.vercel.app/).
 
+![BOOK READER APP](https://raw.githubusercontent.com/vivekneupane11/book-website-nextjs/refs/heads/main/Screenshot%202024-09-25%20at%2023.28.09.png)
+
 ## Video Tutorial
 
 You can watch a tutorial on how to create this app [here](https://www.youtube.com/watch?v=kZVt_OmD-tI).
@@ -36,13 +38,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/book-reading-app.git
+   git clone https://github.com/vivekneupane11/book-website-nextjs.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd book-reading-app
+   cd book-website-nextjs
    ```
 
 3. Install the dependencies:
@@ -76,7 +78,7 @@ Here are some useful scripts you can run:
 ## Project Structure
 
 ```
-book-reading-app/
+book-website-nextjs/
 ├── pages/            # Next.js pages
 ├── components/       # React components
 ├── public/           # Static files
