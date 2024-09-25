@@ -8,6 +8,10 @@ A web application that enhances the reading experience by allowing users to inte
 
 You can check out the live demo of the Book Reading App [here](https://book-website-nextjs-nh5jvrwtr-vivekneupane11.vercel.app/).
 
+## Video Tutorial
+
+You can watch a tutorial on how to create this app [here](https://www.youtube.com/watch?v=kZVt_OmD-tI).
+
 ## Features
 
 - 📚 Displaying Books
@@ -105,3 +109,4 @@ If you have any questions or suggestions, feel free to reach out through my soci
 ## Video Tutorial
 
 You can watch a tutorial on how to create this app [here](https://www.youtube.com/watch?v=kZVt_OmD-tI).
+
