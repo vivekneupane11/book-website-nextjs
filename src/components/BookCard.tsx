@@ -1,4 +1,3 @@
-
 export default function BookCard({title,description,coverImage,onClick}:any) {
   return (
    <div style={cardStyle} onClick={onClick}>
@@ -13,7 +12,7 @@ export default function BookCard({title,description,coverImage,onClick}:any) {
 
 
 const cardStyle = {
-    width: '200px',
+    width: '280px', // Increased from 200px to better fill space when fewer items in row
     padding: '1rem',
     borderRadius: '5px',
     backgroundColor: '#f8eadd',
@@ -21,7 +20,7 @@ const cardStyle = {
     cursor: 'pointer',
     transition: 'transform 0.3s ease',
     marginBottom: '1.5rem',
-    marginRight: '1.6rem',
+    marginRight: '1rem',
   };
   
   const imageStyle = {
@@ -44,4 +43,3 @@ const cardStyle = {
     fontSize: '0.8rem',
     color: '#888',
   };
-  

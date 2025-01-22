@@ -1,8 +1,22 @@
 "use client"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function Header() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    
+    checkIfMobile()
+    window.addEventListener('resize', checkIfMobile)
+    
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [])
+
   return (
    <header style={headerStyle}>
     <motion.div style={leftContainerStyle}
@@ -10,12 +24,13 @@ export default function Header() {
     initial={{opacity:0,x:-1000}} animate={{opacity:1,x:0}}
 >
     <h1 style={bookTitleStyle}>Book App</h1>
-        <motion.input type="text" placeholder='Tell me what you like to read and we will get that ....'
-        style={searchInputStyle}
-        initial={{opacity:0,x:-100}}
-        animate={{opacity:1,x:0}}
-        />
-
+        {!isMobile && (
+          <motion.input type="text" placeholder='Tell me what you like to read and we will get that ....'
+          style={searchInputStyle}
+          initial={{opacity:0,x:-100}}
+          animate={{opacity:1,x:0}}
+          />
+        )}
      
     </motion.div>
 
@@ -76,4 +91,3 @@ const avatarStyle ={
     height:'40px',
     borderRadius:'50%'
 }
-
